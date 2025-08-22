@@ -81,7 +81,7 @@ pub async fn register_user(
 
     // define a new user and save the user
     let new_user_id = Ulid::new().to_string();
-    let new_user = User::new(&register_request.username, hashed_password, &new_user_id);
+    let new_user = User::new(&register_request.username, &new_user_id, hashed_password);
     match store.save_user(&new_user).await {
         Ok(_) => {
             let new_session_object = session::Session::new_with_session_id(
