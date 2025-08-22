@@ -21,7 +21,8 @@ pub mod in_memory_auth_store;
 pub use in_memory_auth_store::InMemoryAuthStore;
 pub mod mysql_auth_store;
 pub use mysql_auth_store::MySQLAuthStore;
-mod redis_auth_store;
+pub mod redis_auth_store;
+pub use redis_auth_store::RedisAuthStore;
 // TODO, implement other auth stores and export them
 
 /// Main error type for working with the auth store
