@@ -17,11 +17,12 @@ pub mod pg_auth_store;
 pub use pg_auth_store::PgAuthStore;
 pub mod mongo_auth_store;
 pub use mongo_auth_store::MongoAuthStore;
+pub mod in_memory_auth_store;
+pub use in_memory_auth_store::InMemoryAuthStore;
+pub mod mysql_auth_store;
+pub use mysql_auth_store::MySQLAuthStore;
+mod redis_auth_store;
 // TODO, implement other auth stores and export them
-mod in_memory_auth_store;
-mod sqlite_json_auth_store;
-// Note, don't export this, it's experimental
-// pub use sqlite_json_auth_store::SqliteJSONAuthStore;
 
 /// Main error type for working with the auth store
 #[derive(Debug)]

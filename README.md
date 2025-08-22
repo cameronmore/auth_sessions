@@ -14,6 +14,9 @@ This library includes three implementations of the AuthStore trait for:
 - SQLite
 - Postgres
 - MongoDB
+- In memory (mainly for testing)
+
+**NOTE that the MySQL and in-memory implementations are experimental.**
 
 Below are two hello-world examples of how to use this library with Axum and Rocket:
 
